@@ -17,7 +17,7 @@ public class TalkingClockWithInputCommandLine {
         getTimeText(args[0].trim());
     }
 
-    public static String getTimeText(String time) {
+    private static String getTimeText(String time) {
         String timeText = null;
 
         boolean isTimeFormatValid = validateTimeFormat(time);
@@ -56,7 +56,7 @@ public class TalkingClockWithInputCommandLine {
         return timeText;
     }
 
-    public static boolean validateTimeFormat(String time) {
+    private static boolean validateTimeFormat(String time) {
         if (!HOURS_MINUTES_PATTERN.matcher(time).matches()) {
             return false;
         }
